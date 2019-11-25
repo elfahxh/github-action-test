@@ -1,4 +1,4 @@
-name: Greetings
+name: Greetings-first-contribution
 
 on: [pull_request, issues]
 
