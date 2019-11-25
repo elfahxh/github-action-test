@@ -1,4 +1,4 @@
-name: CI
+name: simple-workflow
 
 on: [push]
 
