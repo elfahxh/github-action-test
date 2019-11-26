@@ -10,13 +10,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-env:
-  AZP_TOKEN: ${{ secrets.AZP_TOKEN }}
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
-
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
@@ -24,3 +19,7 @@ env:
     echo AZP_TOKEN: ${AZP_TOKEN}
     echo GITHUB_TOKEN: ${GITHUB_TOKEN}
   displayName: 'Run a multi-line script'
+  env:
+    AZP_TOKEN: ${{ secrets.AZP_TOKEN }}
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
