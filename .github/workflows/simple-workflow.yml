@@ -16,3 +16,10 @@ jobs:
         echo Add other actions to build,
         echo test, and deploy your project.
         echo trigger pipepline on master --1
+        echo AZURE_WEBAPP_PUBLISH_PROFILE=${AZURE_WEBAPP_PUBLISH_PROFILE}
+        echo AZP_TOKEN: ${AZP_TOKEN}
+        echo GITHUB_TOKEN: ${GITHUB_TOKEN}
+      env:
+        AZP_TOKEN: ${{ secrets.AZP_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
